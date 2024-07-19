@@ -4,7 +4,7 @@ This project is a requirement for the Metacrafters ETH + AVAX PROOF: Intermediat
 
 ## Description
 
-This project is a simple smart contract that implements the require(), assert(), and revert() statements in the context of an Automated Teller Machine (ATM). The contract allows the owner to deposit and withdraw funds, and check the current balance. 
+This project is a simple smart contract that implements the require(), assert(), and revert() statements. The contract manages a virtual house, allowing the owner to mark or indicate their presence or absence. Futhermore, this contract is able to restrict access to certain functions to only the owner.  
 
 ## Getting Started
 
