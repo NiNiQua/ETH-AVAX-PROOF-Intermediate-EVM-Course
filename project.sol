@@ -1,31 +1,38 @@
-// SPDX-License-Identifier: MIT
+// SPDX-License-Identifier: MIT 
 pragma solidity ^0.8.26;
 
-contract ATM {
-    address private owner;
-    uint private balance;
+contract houseContract { 
+    address public owner; 
+    bool public isPresent;
 
     constructor() {
         owner = msg.sender;
-        balance = 100000; // Initial balance 
+        isPresent = false;
     }
 
-    function withdraw(uint amount) public {
-        require(msg.sender == owner, "Only the owner can withdraw funds.");
-        require(amount <= balance, "Insufficient balance.");
-
-        balance -= amount;
+    modifier onlyOwner {
+        require(msg.sender == owner, "Only the land owner can access.");
+        _;
     }
 
-    function deposit(uint amount) public {
-        assert(amount > 0); // Ensure deposit amount is positive
-        balance += amount;
+    function enterHouse() public onlyOwner {
+        isPresent = true;
     }
 
-    function checkBalance() public view returns (uint) {
-        if (msg.sender!= owner) {
-            revert("Only the owner can check the balance.");
+    function leaveHouse() public onlyOwner  {
+        isPresent = false;
+    }
+
+    function checkPresence() public view {
+        if(isPresent == false) {
+            revert("Land owner is not in MetaHouse.");
+        } 
+        else {
+            revert("Land owner is in MetaHouse.");
         }
-        return balance;
+    }
+
+    function verifyOwnership() public view {
+        assert(msg.sender == owner);
     }
 }
