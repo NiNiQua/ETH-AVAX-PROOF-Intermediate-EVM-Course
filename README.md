@@ -8,6 +8,8 @@ This project is a simple smart contract that implements the require(), assert(),
 
 ## Getting Started
 
+You can use Remix for ease of use. https://remix.ethereum.org/
+
 ### Installing
 
 1. Download the Github file project.sol.
@@ -18,4 +20,4 @@ This project is a simple smart contract that implements the require(), assert(),
 
 * Go to the solidity compiler tab and click compile, and compile and run buttons.
 * Then go to compile and run transactions tab
-* Lastly click on Deploy
+* Lastly click on Deploy. After which you can then interact with the contract to see how the 
