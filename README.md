@@ -1,10 +1,10 @@
 # Project Title
 
-This project is a requirement for the Metacrafters ETH + AVAX PROOF: Intermediate EVM Course.
+MetaHouse Contract
 
 ## Description
 
-This project is a simple smart contract that implements the require(), assert(), and revert() statements. The contract manages a virtual house, allowing the owner to mark or indicate their presence or absence. Futhermore, this contract is able to restrict access to certain functions to only the owner.  
+This project is a simple smart contract that implements the require(), assert(), and revert() statements. This project is a simple smart contract built using Solidity, which allows a land owner to manage their presence in a virtual house (MetaHouse). The contract provides functions for the land owner to enter and leave the MetaHouse, as well as check their presence status.
 
 ## Getting Started
 
